@@ -1,0 +1,310 @@
+{
+  "episodes": [
+    {
+      "id": 1,
+      "name": "Pilot",
+      "synopsis": "Rick takes Morty on a trip to another dimension to find seeds for 'mega-trees', while Jerry and Beth argue over Rick's influence on their son.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/4/4b/S1e1_Rick-and-morty.png/revision/latest/scale-to-width-down/1000?cb=20160904220006"
+    },
+    {
+      "id": 2,
+      "name": "Lawnmower Dog",
+      "synopsis": "Rick creates a device to make family dog Snuffles smarter, but it goes poorly. Rick and Morty invade the dreams of Morty's math teacher. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/d/d7/Lawnmower_Dog.png/revision/latest/scale-to-width-down/1000?cb=20160906083546"
+    },
+    {
+      "id": 3,
+      "name": "Anatomy Park",
+      "synopsis": "Morty ends up at a bizarre theme park of infectious diseases located inside of a homeless man. Jerry's parents introduce their new mutual lover. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/d/d3/Anatomy_Park_7.png/revision/latest/scale-to-width-down/1000?cb=20160913082442"
+    },
+    {
+      "id": 4,
+      "name": "M. Night Shaym-Aliens!",
+      "synopsis": "Aliens put Rick, Morty and Jerry into an simulated reality with the intention of stealing Rick's concentrated dark matter recipe, and Rick tries to get them out as oblivious Jerry pitches a marketing slogan for apples. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2c/Screenshot_2015-09-28_at_7.09.48_PM.png/revision/latest/scale-to-width-down/1000?cb=20160914023626"
+    },
+    {
+      "id": 5,
+      "name": "Meeseeks and Destroy",
+      "synopsis": "Morty has grown weary of Rick's shenanigans, so he leads a supposedly safer adventure. Jerry conjures weird creatures to help him with his golf game. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e7/Meeseeks_and_Drestroy.png/revision/latest/scale-to-width-down/1000?cb=20160913060341"
+    },
+    {
+      "id": 6,
+      "name": "Rick Potion #9 ",
+      "synopsis": "A potion designed to make Morty attractive to one girl goes viral and infects all of Earth, Rick attempts to clean up the mess by creating yet more messes. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/b8/Rick-and-Morty-Season-1-Episode-6-10-4c17.jpg/revision/latest?cb=20150915150728"
+    },
+    {
+      "id": 7,
+      "name": "Raising Gazorpazorp",
+      "synopsis": "After Morty fathers a child with a sex robot, Rick and Summer visit the robot's planet, while the kid grows into an adult within days.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/d/d3/Raising_Gazorpazorp.png/revision/latest/scale-to-width-down/1000?cb=20160917043437"
+    },
+    {
+      "id": 8,
+      "name": "Rixty Minutes",
+      "synopsis": "Unimpressed with what's on TV, Rick installs cable that gets shows from other dimensions. Everyone uses special goggles to see their alternate selves. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/f/fb/Rixty_Minutes_Better_Picture.png/revision/latest/scale-to-width-down/1000?cb=20160917051511"
+    },
+    {
+      "id": 9,
+      "name": "Something Ricked This Way Comes",
+      "synopsis": "Rick is skeptical of Summer's new job at a shop run by the devil. Jerry and Morty argue about Pluto's status as a planet and end up traveling there. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2e/Something_Ricked_This_Way_Comes.png/revision/latest/scale-to-width-down/1000?cb=20160918020616"
+    },
+    {
+      "id": 10,
+      "name": "Close Rick-Counters of the Rick Kind",
+      "synopsis": "Rick's just trying to enjoy a nice breakfast, but he's kidnapped by a group of alternate Ricks and taken to stand trial for crimes against Ricks. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e6/Amfhioopko7i680t2kzx.jpg/revision/latest?cb=20150910180008"
+    },
+    {
+      "id": 11,
+      "name": "Ricksy Business",
+      "synopsis": "When Jerry and Beth go away to take part in a re-creation of the sinking of the Titanic, Rick and Summer throw a party that gets out of control. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/1/1b/Ricksy_business_screencap.png/revision/latest/scale-to-width-down/1000?cb=20140408154817"
+    },
+    {
+      "id": 12,
+      "name": "A Rickle in Time",
+      "synopsis": "Rick unfreezes time, but since he, Morty and Summer have been living for so long on frozen time, a parallel dimension develops. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/29/A_Rickle_in_Time.png/revision/latest/scale-to-width-down/1000?cb=20160920022627"
+    },
+    {
+      "id": 13,
+      "name": "Mortynight Run",
+      "synopsis": "After Rick sells a gun to an alien assassin so he can afford an afternoon at a video arcade, Morty tries to stop the assassin. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e0/Mortynight_Run.png/revision/latest/scale-to-width-down/1000?cb=20160919065322"
+    },
+    {
+      "id": 14,
+      "name": "Auto Erotic Assimilation",
+      "synopsis": "Rick, Morty and Summer stumble on a hive mind named Unity that Rick used to date. Summer objects to Unity's control over an alien planet's population. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/1/13/Auto_Erotic_Assimilation.png/revision/latest/scale-to-width-down/1000?cb=20160923081724"
+    },
+    {
+      "id": 15,
+      "name": "Total Rickall",
+      "synopsis": "The family battles a parasite that implants fake memories into their heads, which leads them to wonder if any of them are real. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/4/49/Total_Rickall.png/revision/latest/scale-to-width-down/1000?cb=20160920093829"
+    },
+    {
+      "id": 16,
+      "name": "Get Schwifty",
+      "synopsis": "When an alien entity appears with musical demands, Rick and Morty call on Ice-T to help them write a tune for an intergalactic song competition. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/0/08/S2e5_outside_church.png/revision/latest/scale-to-width-down/1000?cb=20160926033103"
+    },
+    {
+      "id": 17,
+      "name": "The Ricks Must Be Crazy",
+      "synopsis": "When Rick's car breaks down, he and Morty go inside its battery. Morty discovers that Rick has created a miniature universe inside the battery. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/1/17/The_Ricks_Must_be_Crazy.png/revision/latest/scale-to-width-down/1000?cb=20170812013955"
+    },
+    {
+      "id": 18,
+      "name": "Big Trouble in Little Sanchez",
+      "synopsis": "Summer asks Rick to transport his mind into a teenager to shield her from vampires at school. Beth and Jerry go to 'off-planet' marriage counseling.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e3/Screenshot_2015-09-28_at_8.12.32_AM.png/revision/latest/scale-to-width-down/1000?cb=20150928121615"
+    },
+    {
+      "id": 19,
+      "name": "Interdimensional Cable 2: Tempting Fate",
+      "synopsis": "Jerry is rushed to an alien hospital when he eats ice cream Rick was using to develop a dangerous bacteria. Rick rigs the hospital cable box. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/a/a1/S2e8_Interdimensional_Cable_2.png/revision/latest/scale-to-width-down/1000?cb=20170813055400"
+    },
+    {
+      "id": 20,
+      "name": "Look Who's Purging Now",
+      "synopsis": "Rick and Morty land on a planet where all the citizens are allowed to commit crimes -- including murder -- without punishment for one night. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e6/Look_who%27s_purging_now_HQ.png/revision/latest/scale-to-width-down/1000?cb=20150930233241"
+    },
+    {
+      "id": 21,
+      "name": "The Wedding Squanchers",
+      "synopsis": "When Jerry accidentally gets transported to the planet hosting Birdperson and Tammy's wedding, the whole family attends the ill-fated ceremony. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2f/WeddingSquanchEp.png/revision/latest/scale-to-width-down/1000?cb=20160922184131"
+    },
+    {
+      "id": 22,
+      "name": "The Rickshank Rickdemption",
+      "synopsis": "Summer and Morty travel interdimensionally to locate Rick and find a bunch of Ricks. Rick craves a very specific chicken nugget dipping sauce. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/bc/S3e1_RickandBug.png/revision/latest/scale-to-width-down/1000?cb=20170402072004"
+    },
+    {
+      "id": 23,
+      "name": "Rickmancing the Stone",
+      "synopsis": "With things in turmoil at home, Rick, Morty and Summer travel to a post-apocalyptic world to (rather violently) work out some personal issues.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/5/54/S3e2_specific_rick.png/revision/latest/scale-to-width-down/1000?cb=20170807214225"
+    },
+    {
+      "id": 24,
+      "name": "Pickle Rick",
+      "synopsis": "Rick turns himself into a pickle while the rest of the family goes to therapy. Now Rick has to figure out how to stop being a pickle.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2e/Pickle_Rick_Episode.jpg/revision/latest?cb=20170807204243"
+    },
+    {
+      "id": 25,
+      "name": "Vindicators 3: The Return of Worldender",
+      "synopsis": "While ostensibly helping a group of superheroes called the Vindicators, Rick instead drunkenly sets up a 'Saw'-like scenario for them to navigate. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/8/82/S3e4_ready_to_go.png/revision/latest/scale-to-width-down/1000?cb=20170820095931"
+    },
+    {
+      "id": 26,
+      "name": "The Whirly Dirly Conspiracy",
+      "synopsis": "Rick and Jerry go to a resort where dying is impossible, but a creature wants to kill Rick anyway. Summer's attempt to enlarge her breasts goes awry. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/9/9b/S3e5_02h19m26s212.png/revision/latest/scale-to-width-down/1000?cb=20191019033601"
+    },
+    {
+      "id": 27,
+      "name": "Rest and Ricklaxation",
+      "synopsis": "After another exhausting adventure, Rick and Morty decide they need a vacation. But things go a little haywire when they try a special detox machine. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/8/89/Rms03e06.s29.png/revision/latest/scale-to-width-down/1000?cb=20171004024102"
+    },
+    {
+      "id": 28,
+      "name": "The Ricklantis Mixup",
+      "synopsis": "Rick and Morty encounter a visiting Rick and Morty from the Citadel of Ricks before heading off on an amazing adventure to Atlantis. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2c/S3e7_Tales_From_the_Citadel.png/revision/latest/scale-to-width-down/1000?cb=20170912212129"
+    },
+    {
+      "id": 29,
+      "name": "Morty's Mind Blowers",
+      "synopsis": "Rick shows Morty a room filled with memories Morty begged him to remove from his mind, and things go off the rails when Rick starts restoring them. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/9/98/Rm.s03e08.s05.png/revision/latest/scale-to-width-down/1000?cb=20171003105531"
+    },
+    {
+      "id": 30,
+      "name": "The ABC's of Beth",
+      "synopsis": "Rick and Beth sort out issues from her childhood by visiting a world called Froopyland. Morty and Summer are a little wary of Jerry's new girlfriend. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2b/The_ABC_of_Beth.png/revision/latest/scale-to-width-down/1000?cb=20171002225115"
+    },
+    {
+      "id": 31,
+      "name": "The Rickchurian Mortydate",
+      "synopsis": "The president needs help from Rick and Morty, prompting a bit of a confrontation. Beth begins to suspect that she may be a clone. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/a/ad/S3e10_.png/revision/latest/scale-to-width-down/1000?cb=20170925231207"
+    },
+    {
+      "id": 32,
+      "name": "Edge of Tomorty: Rick Die Rickpeat",
+      "synopsis": "After family breakfast, Rick asks Morty to accompany him to Forbodulon Prime to get some 'death crystals', and Morty doesn't handle them well. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e9/S4e1_morty_pockets_crystal.jpg/revision/latest/scale-to-width-down/1000?cb=20191111050849"
+    },
+    {
+      "id": 33,
+      "name": "The Old Man and the Seat",
+      "synopsis": "Jerry develops an app at the request of a persistent alien with a 'Do Not Develop My App' forehead tattoo. A determined Rick tracks a mystery pooper. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/6/63/S4e2_morty_smash.png/revision/latest/scale-to-width-down/1000?cb=20191122023426"
+    },
+    {
+      "id": 34,
+      "name": "One Crew Over the Crewcoo's Morty",
+      "synopsis": "Rick assembles a crew to break into a heist convention, then needs another crew to stop a heist-planning robot. And Morty writes a heist script.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/6/6b/S4e3_random_job_crew.jpg/revision/latest/scale-to-width-down/1000?cb=20191128193544"
+    },
+    {
+      "id": 35,
+      "name": "Claw and Hoarder: Special Ricktim's Morty",
+      "synopsis": "Rick reluctantly gives in to Morty's wishes to get a pet dragon, then things get weird. Jerry befriends a talking cat and they go to Florida.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/b4/S04e04_Claw_and_Hoarder-_Special_Ricktim%27s_Morty.png/revision/latest/scale-to-width-down/1000?cb=20191209213015"
+    },
+    {
+      "id": 36,
+      "name": "Rattlestar Ricklactica",
+      "synopsis": "Rick and Morty get caught up in a full-on snake war after a space snake bites Morty. Jerry tries to prove he can hang Christmas lights without dying. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/7/74/S4e5_2019-12-29-14h10m35s619.png/revision/latest/scale-to-width-down/1000?cb=20191229202517"
+    },
+    {
+      "id": 37,
+      "name": "Never Ricking Morty",
+      "synopsis": "Rick and Morty get caught in a continuity-creating anthology device full of people telling stories about Rick. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e9/Rick_and_Morty_in_the_Story_Train.png/revision/latest/scale-to-width-down/1000?cb=20210803043038"
+    },
+    {
+      "id": 38,
+      "name": "Promortyus",
+      "synopsis": "Face-sucking aliens cause issues for Morty and Rick, especially when after returning home they realize they left Summer behind in the aliens' world. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/e/e5/S4_e7_glorzo.png/revision/latest?cb=20210722025621"
+    },
+    {
+      "id": 39,
+      "name": "The Vat of Acid Episode",
+      "synopsis": "Morty challenges Rick to build him the real-life equivalent of a 'save game' function to live without consequence. Also, there's a giant vat of acid.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/8/82/S4_e8_vat_of_acid.jpg/revision/latest?cb=20210906170538"
+    },
+    {
+      "id": 40,
+      "name": "Childrick of Mort",
+      "synopsis": "Jerry's plan to take the whole family on a camping trip is sidetracked when Rick gets news that he may have impregnated a planet.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/8/8a/S4_e9_ricklet.jpg/revision/latest/scale-to-width-down/1000?cb=20210906170816"
+    },
+    {
+      "id": 41,
+      "name": "Star Mort Rickturn of the Jerri",
+      "synopsis": "Two Beths, a corporate-sponsored planet incinerator and some faces from the past force Rick and family to 'do a Star Wars' to save Earth. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/6/65/S4_e10_two_beths.jpg/revision/latest?cb=20210906170650"
+    },
+    {
+      "id": 42,
+      "name": "Mort Dinner Rick Andre",
+      "synopsis": "It's a busy night at the Smith house as Rick's nemesis pays a visit and Morty invites a girl over. Then some stuff happens with a portal in the garage.",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/1/1d/S5_e1_mr_nimbus.jpeg/revision/latest/scale-to-width-down/1000?cb=20210629010957"
+    },
+    {
+      "id": 43,
+      "name": "Mortyplicity",
+      "synopsis": "Killer squids are after the Smiths, but luckily Rick created a decoy family. Or are they real? Can the decoys make decoys? Who's real? Are you real? ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/bf/Everybody_Fights_Themselves.png/revision/latest/scale-to-width-down/1000?cb=20210810013140"
+    },
+    {
+      "id": 44,
+      "name": "A Rickconvenient Mort",
+      "synopsis": "Morty falls head-over-heels in love with an ecological superhero, leaving Summer to join Rick on a bender of interplanetary apocalyptic hedonism. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/b3/We_Can%27t_Drop_the_Curtain.png/revision/latest/scale-to-width-down/1000?cb=20210810013917"
+    },
+    {
+      "id": 45,
+      "name": "Rickdependence Spray",
+      "synopsis": "The Smiths band together to fight an army of giant mutant sperm, and let's just say everyone would be better off if Morty stays away from Beth's work",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/a/a9/Sperm_Attack.png/revision/latest/scale-to-width-down/1000?cb=20210803062425"
+    },
+    {
+      "id": 46,
+      "name": "Amortycan Grickfitti",
+      "synopsis": "Beth crashes Rick and Jerry's hellish guys night out, while Morty and Summer attempt to use a spaceship to impress a cool new kid at school. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/1/1b/Amortycan_grickffiti.PNG/revision/latest?cb=20210720003151"
+    },
+    {
+      "id": 47,
+      "name": "Rick & Morty's Thanksploitation Spectacular",
+      "synopsis": "Rick turns himself into a turkey after he ruffles the President's feathers on Thanksgiving, and the situation soon spirals into total clucking carnage. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/a/a7/Rick_and_Morty_Are_Turkeys.png/revision/latest/scale-to-width-down/1000?cb=20210803060518"
+    },
+    {
+      "id": 48,
+      "name": "Gotron Jerrysis Rickvangelion",
+      "synopsis": "The Smiths get a lesson on the meaning of family after Rick cancels a trip to Boob World to acquire the fifth and final GoTron ferret. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/f/f2/Gotron.PNG/revision/latest?cb=20210720195414"
+    },
+    {
+      "id": 49,
+      "name": "Rickternal Friendshine of the Spotless Mort",
+      "synopsis": "Rickternal Friendshine of the Spotless Mort",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/2/2b/S5e8.jpeg/revision/latest/scale-to-width-down/1000?cb=20220919034341"
+    },
+    {
+      "id": 50,
+      "name": "Forgetting Sarick Mortshall",
+      "synopsis": "When Rick starts using birds as sidekicks, Morty finds a new partner in a portal. Is Rick and Morty's interdimensional partnership done forever?",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/b/b9/Forgetting_sarick_mortshall.PNG/revision/latest?cb=20210809034354"
+    },
+    {
+      "id": 51,
+      "name": "Rickmurai Jack",
+      "synopsis": "Rick's still doing the weird crows thing, but a middle-aged Morty hopes to reconnect with Rick, leading them down an emotional path in a familiar location. ",
+      "image": "https://static.wikia.nocookie.net/rickandmorty/images/0/0a/S5e10_rick_and_two_crows_intro.png/revision/latest/scale-to-width-down/1000?cb=20210912184419"
+    }
+  ]
+}
