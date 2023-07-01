@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-headerColor items-center flex px-48">
+  <header class="bg-primary items-center flex px-48">
     <img src="/assets/Rick-icon.png" alt="Rick Head" class="h-24" />
     <nav class="w-full">
       <ul class="flex justify-evenly items-center text-white">
@@ -32,8 +32,8 @@
         <li>
           <NuxtLink
             class="text-2xl hover:text-lime-400 focus:text-lime-400"
-            to="/locations"
-            >Locations</NuxtLink
+            to="/wallpapers"
+            >Wallpapers</NuxtLink
           >
         </li>
         <li>
@@ -50,4 +50,4 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>
