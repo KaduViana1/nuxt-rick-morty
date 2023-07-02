@@ -9,11 +9,11 @@
       :alt="data?.name"
     />
     <div
-      class="flex p-2 h-full space-y-1 text-xl rounded-b-lg flex-col text-white bg-primary"
+      class="flex p-2 h-full space-y-1 text-xl rounded-b-lg flex-col text-white bg-primary card"
     >
       <div>
         <b>Name:</b>
-        <p class="text-base">{{ data?.name }}</p>
+        <p class="text-base line-clamp-1">{{ data?.name }}</p>
       </div>
       <div>
         <b>Status:</b>
@@ -48,3 +48,9 @@ const url = `https://rickandmortyapi.com/api/character/${id}`;
 const { data } = await useFetch<DataTypes>(url, { key: id });
 const router = useRouter();
 </script>
+
+<style scoped>
+.card {
+  max-width: 256px;
+}
+</style>

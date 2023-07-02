@@ -1,9 +1,10 @@
 <template>
   <div>
     <Header />
-    <div class="px-60 bg-[url(/assets/background.jpg)]">
+    <div class="py-8 bg-[url(/assets/background.jpg)]">
       <slot />
     </div>
+    <Footer />
   </div>
 </template>
 

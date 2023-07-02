@@ -1,6 +1,6 @@
 <template>
   <header class="bg-primary items-center flex px-48">
-    <img src="/assets/Rick-icon.png" alt="Rick Head" class="h-24" />
+    <img src="../assets/Rick-icon.png" alt="Rick Head" class="h-24" />
     <nav class="w-full">
       <ul class="flex justify-evenly items-center text-white">
         <li>
@@ -19,7 +19,7 @@
         </li>
         <li>
           <img
-            src="/assets/Rick-And-Morty-Logo.png"
+            src="../assets/Rick-And-Morty-Logo.png"
             alt="Rick Morty Logo"
             class="h-32 self-center cursor-pointer"
             @click="
@@ -41,12 +41,12 @@
             class="text-white min-w-fit flex items-center text-2xl focus:text-lime-400 hover:text-lime-400"
           >
             Log in
-            <img class="h-12 ml-1" src="/assets/portal.gif" alt="Portal" />
+            <img class="h-12 ml-1" src="../assets/portal.gif" alt="Portal" />
           </button>
         </li>
       </ul>
     </nav>
-    <img src="/assets/Morty-icon.png" alt="Rick Head" class="h-20" />
+    <img src="../assets/Morty-icon.png" alt="Rick Head" class="h-20" />
   </header>
 </template>
 
