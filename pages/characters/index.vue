@@ -1,37 +1,60 @@
 <template>
   <div class="w-4/5 flex flex-col mx-auto items-center">
     <form @submit.prevent="searchCharacter" class="w-2/3">
+      <label class="underline text-2xl pl-2" for="search"
+        >Search Character</label
+      >
       <input
-        class="text-xl w-full p-2 border-2 border-white bg-primary text-white rounded-md mb-10"
+        class="text-xl w-full outline-none p-2 border-2 border-white bg-primary rounded-md mb-10 focus:border-lime-400"
         type="text"
-        placeholder="Search Character"
-        v-model="searchInput"
+        placeholder="Poopybutthole"
+        id="search"
+        v-model.lazy="searchInput"
       />
     </form>
-    <div class="flex w-4/5 mx-auto justify-center">
-      <div v-if="charactersList" class="grid grid-cols-4 gap-y-10 gap-x-8">
-        <CharacterCard
-          v-for="result in charactersList.results"
-          :id="result.id.toString()"
-          :key="result.id"
-        />
+    <div v-if="charactersList" class="flex w-full items-center flex-col">
+      <div class="w-4/5 px-11 mb-5 flex justify-between">
+        <span class="text-3xl">Characters: {{ search }}</span>
+        <span class="text-3xl">Results: {{ charactersList?.info.count }}</span>
+      </div>
+      <div class="flex w-4/5 mx-auto justify-center">
+        <div class="grid grid-cols-4 gap-y-10 gap-x-8">
+          <CharacterCard
+            v-for="result in charactersList.results"
+            :id="result.id.toString()"
+            :key="result.id"
+          />
+        </div>
       </div>
     </div>
+    <div
+      class="flex flex-col space-y-5 pt-40 justify-center items-center"
+      v-else
+    >
+      <p class="text-4xl">Sorry, no results found</p>
+      <button
+        @click="
+          () => {
+            searchInput = '';
+            changePage(baseUrl);
+          }
+        "
+        class="px-2 py-1 bg-primary text-xl border-2 rounded-md border-white"
+      >
+        Go back
+      </button>
+    </div>
     <div class="flex mt-5 space-x-4">
-      <button
+      <Button
         @click="changePage(charactersList?.info.prev)"
-        v-show="charactersList?.info.prev !== null"
-        class="px-2 py-1 bg-white"
+        v-show="charactersList?.info.prev"
+        >Prev</Button
       >
-        Prev
-      </button>
-      <button
+      <Button
         @click="changePage(charactersList?.info.next)"
-        :disabled="charactersList?.info.next === null"
-        class="px-2 py-1 bg-white"
+        v-show="charactersList?.info.next"
+        >Next</Button
       >
-        Next
-      </button>
     </div>
   </div>
 </template>
@@ -41,10 +64,31 @@ type DataTypes = {
   info: {
     count: number;
     pages: number;
-    next: string;
+    next: string | null;
     prev: string | null;
   };
-  results: [any];
+  results: [
+    {
+      id: number;
+      name: string;
+      status: string;
+      species: string;
+      type: string;
+      gender: string;
+      origin: {
+        name: string;
+        url: string;
+      };
+      location: {
+        name: string;
+        url: string;
+      };
+      image: string;
+      episode: string[];
+      url: string;
+      created: string;
+    }
+  ];
 };
 
 const baseUrl = 'https://rickandmortyapi.com/api/character?';
@@ -53,11 +97,21 @@ const searchInput = ref<string>('');
 const charactersList = ref();
 const { query } = useRoute();
 
+const search = computed(() => {
+  if (searchInput.value === '') {
+    return 'All';
+  } else {
+    return (
+      searchInput.value.charAt(0).toUpperCase() + searchInput.value.slice(1)
+    );
+  }
+});
+
 const getCharacters = async (url: string) => {
   const { data } = await useFetch<DataTypes>(() => url, {
     key: currentPage.value,
   });
-  charactersList.value = toRaw(data.value);
+  charactersList.value = data.value;
 };
 
 const changePage = (url: string) => {
@@ -82,7 +136,9 @@ const firstFetch = () => {
 };
 
 const searchCharacter = () => {
-  if (searchInput.value.length > 2) {
+  if (searchInput.value === '') {
+    getCharacters(`https://rickandmortyapi.com/api/character`);
+  } else if (searchInput.value.length > 2) {
     getCharacters(
       `https://rickandmortyapi.com/api/character/?name=${searchInput.value.toLowerCase()}`
     );
