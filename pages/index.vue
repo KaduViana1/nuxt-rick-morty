@@ -23,17 +23,7 @@ useHead({
   title: 'Rick and Morty',
 });
 
-let cards = ref<number[] | undefined>([]);
-
-onMounted(() => {
-  const sessionsCards =
-    sessionStorage
-      .getItem('cards')
-      ?.split(',')
-      .map(n => parseInt(n)) ?? getRandomCards();
-
-  cards.value = sessionsCards;
-});
+const cards = ref<number[] | undefined>([]);
 
 function getRandomCards() {
   let cardsArray: number[] = [];
@@ -45,6 +35,16 @@ function getRandomCards() {
   sessionStorage.setItem('cards', cardsArray.toString());
   return cardsArray;
 }
+
+onMounted(() => {
+  const sessionsCards =
+    sessionStorage
+      .getItem('cards')
+      ?.split(',')
+      .map(n => parseInt(n)) ?? getRandomCards();
+
+  cards.value = sessionsCards;
+});
 </script>
 
 <style scoped></style>
