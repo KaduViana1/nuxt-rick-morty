@@ -59,9 +59,9 @@
         <n-collapse-item title="Episodes" name="1">
           <div class="grid grid-cols-2 space-y-1">
             <NuxtLink
-              class="text-lg"
+              class="text-lg line-clamp-1 underline"
               v-for="episode in character?.episode"
-              :key="character?.id"
+              :key="episode"
               :to="`/episodes/${episode.slice(40)}`"
               >{{ episodes[parseFloat(episode.slice(40))]?.name }}
             </NuxtLink>

@@ -38,6 +38,7 @@
         </li>
         <li>
           <button
+            @click="openModal"
             class="text-white min-w-fit flex items-center text-2xl focus:text-lime-400 hover:text-lime-400"
           >
             Log in
@@ -50,4 +51,10 @@
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const emit = defineEmits(['openModal']);
+
+const openModal = () => {
+  emit('openModal');
+};
+</script>
