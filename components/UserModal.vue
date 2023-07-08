@@ -1,7 +1,7 @@
 <template>
   <div class="modalContainer">
     <div
-      class="relative flex flex-col items-center m-auto bg-primary border-2 text-white border-white rounded-lg w-3/12 h-96 p-8"
+      class="relative flex flex-col items-center m-auto bg-primary border-2 text-white border-white rounded-lg w-3/12 p-8"
     >
       <button @click="closeModal" class="absolute right-2 top-2">
         <svg
@@ -19,35 +19,22 @@
           />
         </svg>
       </button>
-      <form class="flex flex-col w-4/5 space-y-2 items-center">
-        <label class="text-2xl" for="name">Name:</label>
-        <input
-          class="p-1 rounded-md w-full text-black"
-          type="text"
-          id="name"
-          placeholder="John Doe"
-        />
-        <label class="text-2xl" for="email">Email:</label>
-        <input
-          class="p-1 rounded-md w-full text-black"
-          type="email"
-          id="email"
-          placeholder="exemple@email.com"
-        />
-        <label class="text-2xl" for="password">Password:</label>
-        <input
-          class="p-1 rounded-md w-full text-black"
-          type="password"
-          id="password"
-        />
-        <Button type="submit">Sign Up</Button>
-      </form>
+      <span class="text-3xl font-bold mb-2">{{ displayInputs }}</span>
+      <SignUpModal
+        v-if="displayInputs === 'Register'"
+        @changeForm="displayInputs = 'Login'"
+      />
+      <SignInModal
+        v-if="displayInputs === 'Login'"
+        @changeForm="displayInputs = 'Register'"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const emit = defineEmits(['closeModal']);
+const displayInputs = ref<'Register' | 'Login'>('Register');
 
 const closeModal = () => {
   emit('closeModal');
