@@ -29,19 +29,28 @@
         Create Account
       </button>
     </div>
-    <Button form="loginForm" type="submit">Login</Button>
+    <button
+      class="flex items-center text-2xl font-bold underline"
+      form="loginForm"
+      type="submit"
+    >
+      Login <img class="h-10 ml-1" src="../assets/portal.gif" alt="Portal" />
+    </button>
   </div>
-  <span class="text-xl">{{ apiResponse }}</span>
+  <span class="text-xl">{{ errorMessage }}</span>
 </template>
 
 <script setup lang="ts">
 import axios from 'axios';
+const userName = useUserName();
+const userId = useUserId();
 const formData = reactive({
   email: '',
   password: '',
 });
-const apiResponse = ref('');
-const emit = defineEmits(['changeForm']);
+const errorMessage = ref('');
+const emit = defineEmits(['changeForm', 'closeModal']);
+const router = useRouter();
 
 const signIn = () => {
   axios
@@ -51,12 +60,15 @@ const signIn = () => {
     })
     .then(response => {
       if (response.data.user) {
-        apiResponse.value = `User created`;
+        userName.value = response.data.user.name;
+        userId.value = response.data.user.id;
+        emit('closeModal');
+        router.push('/');
+        resetInputs();
       }
     })
     .catch(error => {
-      apiResponse.value = error.response.data.message;
-      console.log(error.response.data.message);
+      errorMessage.value = error.response.data.message;
     });
 };
 

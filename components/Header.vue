@@ -38,11 +38,18 @@
         </li>
         <li>
           <button
+            v-if="!userName"
             @click="openModal"
-            class="text-white min-w-fit flex items-center text-2xl focus:text-lime-400 hover:text-lime-400"
+            class="min-w-fit flex items-center text-2xl focus:text-lime-400 hover:text-lime-400"
           >
             Log in
-            <img class="h-12 ml-1" src="../assets/portal.gif" alt="Portal" />
+          </button>
+          <button
+            class="min-w-fit flex items-center text-2xl focus:text-lime-400 hover:text-lime-400"
+            @click="logout()"
+            v-else
+          >
+            Log out
           </button>
         </li>
       </ul>
@@ -53,6 +60,13 @@
 
 <script setup lang="ts">
 const emit = defineEmits(['openModal']);
+const userName = useUserName();
+const userId = useUserId();
+
+const logout = () => {
+  userId.value = null;
+  userName.value = null;
+};
 
 const openModal = () => {
   emit('openModal');

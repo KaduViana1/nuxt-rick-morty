@@ -57,6 +57,7 @@
       </n-collapse-item>
     </n-collapse>
   </div>
+  <!-- <CommentSection :id="id" /> -->
 </template>
 
 <script setup lang="ts">
@@ -72,6 +73,7 @@ type DataTypes = {
 
 import { darkTheme } from 'naive-ui';
 import { episodes } from '../../assets/episodes.json';
+
 const { id } = useRoute().params;
 const showEpisodes = ref(false);
 const { data: episode } = useFetch<DataTypes>(

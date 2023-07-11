@@ -23,10 +23,12 @@
       <SignUpModal
         v-if="displayInputs === 'Register'"
         @changeForm="displayInputs = 'Login'"
+        @closeModal="$emit('closeModal')"
       />
       <SignInModal
         v-if="displayInputs === 'Login'"
         @changeForm="displayInputs = 'Register'"
+        @closeModal="$emit('closeModal')"
       />
     </div>
   </div>
@@ -34,7 +36,7 @@
 
 <script setup lang="ts">
 const emit = defineEmits(['closeModal']);
-const displayInputs = ref<'Register' | 'Login'>('Register');
+const displayInputs = ref<'Register' | 'Login'>('Login');
 
 const closeModal = () => {
   emit('closeModal');

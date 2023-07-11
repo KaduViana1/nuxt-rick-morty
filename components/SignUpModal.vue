@@ -40,7 +40,7 @@
     </div>
     <Button form="registerForm" type="submit">Sign Up</Button>
   </div>
-  <span class="text-xl">{{ apiResponse }}</span>
+  <span class="text-xl text-red-600">{{ errorMessage }}</span>
 </template>
 
 <script setup lang="ts">
@@ -50,8 +50,11 @@ const formData = reactive({
   email: '',
   password: '',
 });
-const apiResponse = ref('');
-const emit = defineEmits(['changeForm']);
+const errorMessage = ref('');
+const emit = defineEmits(['changeForm', 'closeModal']);
+const userName = useUserName();
+const userId = useUserId();
+const router = useRouter();
 
 const signUp = () => {
   axios
@@ -62,12 +65,15 @@ const signUp = () => {
     })
     .then(response => {
       if (response.data.user) {
-        apiResponse.value = `User created`;
+        userName.value = response.data.user.name;
+        userId.value = response.data.user.id;
+        emit('closeModal');
+        router.push('/');
+        resetInputs();
       }
     })
     .catch(error => {
-      apiResponse.value = error.response.data.message;
-      console.log(error.response.data.message);
+      errorMessage.value = error.response.data.message;
     });
 };
 

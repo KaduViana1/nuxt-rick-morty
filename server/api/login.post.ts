@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcrypt';
-import { PrismaClient, Prisma } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export default eventHandler(async event => {
@@ -29,6 +29,4 @@ export default eventHandler(async event => {
   } catch (err) {
     return err;
   }
-
-  return {};
 });

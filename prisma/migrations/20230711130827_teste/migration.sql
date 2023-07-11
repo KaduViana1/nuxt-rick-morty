@@ -11,6 +11,7 @@ CREATE TABLE "Comment" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "content" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "episode" TEXT NOT NULL,
     "authorId" TEXT NOT NULL,
     "parentId" TEXT,
     CONSTRAINT "Comment_authorId_fkey" FOREIGN KEY ("authorId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
