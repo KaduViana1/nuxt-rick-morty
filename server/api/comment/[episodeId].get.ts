@@ -12,7 +12,7 @@ export default eventHandler(async event => {
   try {
     if (episodeId) {
       const comment = await prisma.comment.findMany({
-        where: { episode: episodeId, parentId: null },
+        where: { episode: episodeId },
         orderBy: { createdAt: 'desc' },
         take: 10,
         skip,

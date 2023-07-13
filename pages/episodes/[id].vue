@@ -57,7 +57,7 @@
       </n-collapse-item>
     </n-collapse>
   </div>
-  <!-- <CommentSection :id="id" /> -->
+  <CommentSection :id="id" />
 </template>
 
 <script setup lang="ts">
@@ -76,7 +76,7 @@ import { episodes } from '../../assets/episodes.json';
 
 const { id } = useRoute().params;
 const showEpisodes = ref(false);
-const { data: episode } = useFetch<DataTypes>(
+const { data: episode } = await useFetch<DataTypes>(
   `https://rickandmortyapi.com/api/episode/${id}`,
   {
     key: id.toString(),

@@ -3,15 +3,13 @@ const prisma = new PrismaClient();
 
 export default eventHandler(async event => {
   const body = await readBody(event);
-  const { content, episode, authorId } = body;
+  const { userId, commentId } = body;
 
   try {
-    const newComment = await prisma.comment.create({
-      data: { content, authorId, episode },
-    });
-    return newComment;
-  } catch (error) {
-    return error;
+    await prisma.likes.create({ data: { userId, commentId } });
+  } catch (err) {
+    console.log(err);
+    return err;
   } finally {
     await prisma.$disconnect();
   }

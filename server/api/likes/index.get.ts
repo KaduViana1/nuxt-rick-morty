@@ -2,20 +2,17 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export default eventHandler(async event => {
-  const id = event.context.params?.id;
+  let commentId;
 
   try {
-    const user = await prisma.user.findUnique({
+    const count = await prisma.likes.count({
       where: {
-        id,
-      },
-      select: {
-        name: true,
+        commentId,
       },
     });
-
-    return user;
+    return count;
   } catch (err) {
+    console.log(err);
     return err;
   } finally {
     await prisma.$disconnect();

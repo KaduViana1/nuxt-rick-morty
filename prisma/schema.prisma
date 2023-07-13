@@ -15,17 +15,26 @@ model User {
   name     String
   email    String    @unique
   password String
-  posts    Comment[]
+  comments Comment[]
+  likes    Likes[]
 }
 
 model Comment {
-  id         String    @id @default(uuid())
-  content    String
-  createdAt  DateTime  @default(now())
-  episode    String
-  author     User      @relation(fields: [authorId], references: [id])
-  authorId   String
-  parentPost Comment?  @relation("ChildParent", fields: [parentId], references: [id])
-  parentId   String?
-  childPosts Comment[] @relation("ChildParent")
+  id        String   @id @default(uuid())
+  content   String
+  createdAt DateTime @default(now())
+  episode   String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String
+  likes     Likes[]
+}
+
+model Likes {
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comment   Comment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  userId    String
+  commentId String
+
+  @@id([userId, commentId])
+  @@unique([userId, commentId])
 }
