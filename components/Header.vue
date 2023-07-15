@@ -62,10 +62,13 @@
 const emit = defineEmits(['openModal']);
 const userName = useUserName();
 const userId = useUserId();
+const router = useRouter();
 
 const logout = () => {
   userId.value = null;
   userName.value = null;
+
+  router.push('/');
 };
 
 const openModal = () => {

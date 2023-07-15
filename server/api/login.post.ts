@@ -15,7 +15,7 @@ export default eventHandler(async event => {
     if (!user) {
       throw createError({
         statusCode: 400,
-        statusMessage: 'No user found',
+        statusMessage: 'Invalid Credentials',
       });
     }
     if (await bcrypt.compare(password, user.password)) {

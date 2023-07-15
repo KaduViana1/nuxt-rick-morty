@@ -4,21 +4,19 @@ const prisma = new PrismaClient();
 export default eventHandler(async event => {
   const query = getQuery(event);
 
-  const likeId = {
+  const like = {
     userId: query.userId as string,
     commentId: query.commentId as string,
   };
 
   try {
-    if (likeId) {
-      const like = await prisma.likes.findUnique({
+    if (like) {
+      await prisma.likes.delete({
         where: {
-          userId_commentId: likeId,
+          userId_commentId: like,
         },
       });
-
-      if (like) return true;
-      else return false;
+      return { success: true };
     }
   } catch (err) {
     console.log(err);

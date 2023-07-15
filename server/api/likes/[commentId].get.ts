@@ -2,12 +2,16 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export default eventHandler(async event => {
-  const body = await readBody(event);
-  const { userId, commentId } = body;
+  const commentId = event.context.params?.commentId;
 
   try {
-    const newLike = await prisma.likes.create({ data: { userId, commentId } });
-    return newLike;
+    const count = await prisma.likes.count({
+      where: {
+        commentId,
+      },
+    });
+
+    return count;
   } catch (err) {
     console.log(err);
     return err;

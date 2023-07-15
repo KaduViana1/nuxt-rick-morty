@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { commonDark } from 'naive-ui';
 const prisma = new PrismaClient();
 
 export default eventHandler(async event => {
@@ -11,12 +12,18 @@ export default eventHandler(async event => {
 
   try {
     if (episodeId) {
-      const comment = await prisma.comment.findMany({
+      const data = await prisma.comment.findMany({
         where: { episode: episodeId },
         orderBy: { createdAt: 'desc' },
         take: 10,
         skip,
       });
+
+      const count = await prisma.comment.count({
+        where: { episode: episodeId },
+      });
+
+      const comment = { data, count };
 
       return comment;
     }

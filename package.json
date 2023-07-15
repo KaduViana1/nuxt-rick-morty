@@ -16,6 +16,7 @@
     "@types/node": "^18",
     "naive-ui": "^2.34.4",
     "nuxt": "^3.6.1",
+    "nuxt-icon": "^0.4.2",
     "prisma": "^4.16.2"
   },
   "dependencies": {
