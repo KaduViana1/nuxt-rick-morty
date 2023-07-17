@@ -11,14 +11,14 @@
       >
       <div class="space-x-4">
         <button
-          @click="() => emits('confirm')"
+          @click="onCommentDelete"
           class="p-2 bg-red-600 rounded-md border-2 border-white font-bold text-lg"
         >
           Delete
         </button>
         <button
           class="p-2 rounded-md border-2 border-white font-bold text-lg"
-          @click="() => (deleteModalIsOpen = false)"
+          @click="handleCancel"
         >
           Cancel
         </button>
@@ -28,8 +28,27 @@
 </template>
 
 <script setup lang="ts">
-const emits = defineEmits(['confirm']);
-const deleteModalIsOpen = useDeleteModalIsOpen();
+const deleteOptions = useDeleteComment();
+
+const handleCancel = () => {
+  deleteOptions.value.commentId = '';
+  deleteOptions.value.modalOpen = false;
+};
+
+const onCommentDelete = async () => {
+  try {
+    await useFetch(`/api/comment`, {
+      method: 'DELETE',
+      query: { commentId: deleteOptions.value.commentId },
+    });
+  } catch (err) {
+    console.log(err);
+  } finally {
+    deleteOptions.value.commentId = '';
+    deleteOptions.value.modalOpen = false;
+    deleteOptions.value.refetch = true;
+  }
+};
 </script>
 
 <style scoped>

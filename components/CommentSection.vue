@@ -8,11 +8,6 @@
       :key="comment.id"
       class="border-2 my-2 border-white rounded-lg w-full flex flex-col justify-start"
       :comment="comment"
-      @delete="
-        () => {
-          onCommentDelete(comment.id);
-        }
-      "
       @unlike="() => onUnlike(comment.id)"
       @like="() => onLike(comment.id)"
     >
@@ -58,7 +53,7 @@ const userId = useUserId();
 const inputValue = ref('');
 const comments = ref();
 const count = ref();
-const deleteModalIsOpen = useDeleteModalIsOpen();
+const deleteOptions = useDeleteComment();
 
 const fetchComments = async () => {
   const { data } = await useFetch<CommentResponse>(`/api/comment/${id}`);
@@ -81,18 +76,12 @@ const submitComment = async () => {
   }
 };
 
-const onCommentDelete = async (id: string) => {
-  try {
-    await useFetch(`/api/comment`, {
-      method: 'DELETE',
-      query: { commentId: id },
-    });
-
+watch(deleteOptions.value, () => {
+  if (deleteOptions.value.refetch === true) {
+    deleteOptions.value.refetch = false;
     fetchComments();
-  } catch (err) {
-    console.log(err);
   }
-};
+});
 
 const onUnlike = async (id: string) => {
   try {

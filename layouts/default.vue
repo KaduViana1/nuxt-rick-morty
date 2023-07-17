@@ -2,7 +2,7 @@
   <div class="text-white">
     <Teleport to="body">
       <UserModal @closeModal="modalIsOpen = false" v-show="modalIsOpen" />
-      <DeleteModal v-show="deleteModalIsOpen" />
+      <DeleteModal v-show="deleteOptions.modalOpen" />
     </Teleport>
 
     <Header @open-modal="modalIsOpen = true" />
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const modalIsOpen = ref(false);
-const deleteModalIsOpen = useDeleteModalIsOpen();
+const deleteOptions = useDeleteComment();
 </script>
 
 <style scoped>

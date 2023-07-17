@@ -5,29 +5,22 @@
     <div class="w-full flex justify-between">
       <span class="underline text-xl font-bold">{{ author }}:</span>
       <div>
-        <Icon name="heroicons-solid:hand-thumb-up" size="1rem" />
+        <Icon name="heroicons-solid:hand-thumb-up" size="16" />
         {{ likesCount }}
       </div>
     </div>
     <p class="text-lg">{{ comment?.content }}</p>
     <div class="self-end flex space-x-4 items-end">
-      <button
-        v-if="userId === comment.authorId"
-        @click="() => (deleteModalIsOpen = true)"
-      >
-        <Icon name="fa6-solid:trash-can" size="1.2rem" color="#ff4d4d" />
+      <button v-if="userId === comment.authorId" @click="handleDelete">
+        <Icon name="fa6-solid:trash-can" size="19" color="#ff4d4d" />
       </button>
       <button @click="unLike" v-if="userId && isLiked">
-        <Icon
-          name="heroicons-solid:hand-thumb-up"
-          size="1.2rem"
-          color="#a3e635"
-        />
+        <Icon name="heroicons-solid:hand-thumb-up" size="20" color="#a3e635" />
       </button>
       <button @click="like" v-if="userId && !isLiked">
         <Icon
           name="heroicons-outline:hand-thumb-up"
-          size="1.2rem"
+          size="20"
           color="#a3e635"
         />
       </button>
@@ -48,7 +41,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-us', {
 });
 const created = new Date(comment.createdAt);
 const userId = useUserId();
-const deleteModalIsOpen = useDeleteModalIsOpen();
+const deleteOptions = useDeleteComment();
 const isLiked = ref();
 const likesCount = ref();
 
@@ -70,6 +63,11 @@ const getAuthorName = async (authorId: string) => {
   } catch (err) {
     return err;
   }
+};
+
+const handleDelete = () => {
+  deleteOptions.value.commentId = comment.id;
+  deleteOptions.value.modalOpen = true;
 };
 
 const postIsLiked = async () => {
