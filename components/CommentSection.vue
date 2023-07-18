@@ -32,7 +32,7 @@
         <Button class="self-end mt-3" type="submit">Submit</Button>
       </form>
     </div>
-    <div v-else>Please login do make a comment</div>
+    <div class="text-xl font-bold" v-else>Please login to make a comment</div>
   </div>
 </template>
 

@@ -1,0 +1,126 @@
+{
+  "mobile": [
+    {
+      "id": 1,
+      "imageURL": "https://i.pinimg.com/564x/8c/80/b1/8c80b18689b229ce5894d5a253409634.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/288723026126169175/"
+    },
+    {
+      "id": 2,
+      "imageURL": "https://i.pinimg.com/564x/e0/99/27/e09927eccdbd9e1d91597e5bc8bcf8c6.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/15129348741698534/"
+    },
+    {
+      "id": 3,
+      "imageURL": "https://i.pinimg.com/564x/47/59/40/4759401fe2bfd311b51d6a7e1c0b9716.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/621919029792544613/"
+    },
+    {
+      "id": 4,
+      "imageURL": "https://i.pinimg.com/564x/f9/b3/e3/f9b3e35c7a2ae4402a9a805ad14fe042.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/1618549852449863/"
+    },
+    {
+      "id": 5,
+      "imageURL": "https://i.pinimg.com/564x/b8/7b/b5/b87bb5ba63c69ef06620f0811fa952b4.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/234750199319324321/"
+    },
+    {
+      "id": 6,
+      "imageURL": "https://i.pinimg.com/564x/91/d4/e9/91d4e96a5d249bd6b8f924b0ce4cd4ff.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/139822763423653480/"
+    },
+    {
+      "id": 7,
+      "imageURL": "https://i.pinimg.com/564x/d1/7a/3e/d17a3e7a4b6c267c0b08d28c3629a6b0.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/827466131557944760/"
+    },
+    {
+      "id": 8,
+      "imageURL": "https://i.pinimg.com/564x/18/67/ce/1867ce3f27e9ea4a71de35653f689835.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/1266706134878682/"
+    },
+    {
+      "id": 9,
+      "imageURL": "https://i.pinimg.com/564x/cf/9f/49/cf9f493de7891816cca3d6e5d661edb3.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/29906785018445246/"
+    },
+    {
+      "id": 10,
+      "imageURL": "https://i.pinimg.com/564x/da/54/ef/da54ef8d10e13c5750a201a8588be5d4.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/582090320603845089/"
+    },
+    {
+      "id": 11,
+      "imageURL": "https://i.pinimg.com/564x/04/0d/67/040d67c7b9f2d597b92dfcb596f37d2c.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/919508448894218728/"
+    },
+    {
+      "id": 12,
+      "imageURL": "https://i.pinimg.com/564x/2d/86/9f/2d869f42a8fc48f8270df8e157f47c04.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/782781979008295046/"
+    }
+  ],
+  "desktop": [
+    {
+      "id": 1,
+      "imageURL": "https://i.pinimg.com/originals/c5/d4/d8/c5d4d85b453f9543c5d324d5d2baad23.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/561894491024977644/"
+    },
+    {
+      "id": 2,
+      "imageURL": "https://i.redd.it/8g48e3pqehx11.png",
+      "pinterestURL": "https://br.pinterest.com/pin/42150946499391042/"
+    },
+    {
+      "id": 3,
+      "imageURL": "https://i.redd.it/zn2m9e2cxvf51.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/709668853797009228/"
+    },
+    {
+      "id": 4,
+      "imageURL": "https://images6.alphacoders.com/876/876591.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/925137948427717914/"
+    },
+    {
+      "id": 5,
+      "imageURL": "https://i.imgur.com/y8ger8Z.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/748090188116556165/"
+    },
+    {
+      "id": 6,
+      "imageURL": "https://i.redd.it/41qgfndwltv51.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/279786195592919431/"
+    },
+    {
+      "id": 7,
+      "imageURL": "https://i.imgur.com/2jJcVP4.jpeg",
+      "pinterestURL": "https://br.pinterest.com/pin/650629477432272518/"
+    },
+    {
+      "id": 8,
+      "imageURL": "https://i.redd.it/e3b1h4prhuz31.png",
+      "pinterestURL": "https://br.pinterest.com/pin/584342120405831226/"
+    },
+    {
+      "id": 9,
+      "imageURL": "https://i.pinimg.com/originals/72/ce/ea/72ceeaf4a9627659ce6311f57ebcf9a5.png",
+      "pinterestURL": "https://br.pinterest.com/pin/666321707364888902/"
+    },
+    {
+      "id": 10,
+      "imageURL": "https://rare-gallery.com/thumbnail/391712-rick-and-morty-4k-pc-wallpaper.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/1000643610939641220/"
+    },
+    {
+      "id": 11,
+      "imageURL": "https://images.hdqwalls.com/wallpapers/rick-and-morty-in-another-dimension-illustration-6c.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/786300416206702732/"
+    },
+    {
+      "id": 12,
+      "imageURL": "https://c4.wallpaperflare.com/wallpaper/727/492/36/rick-and-morty-tv-adult-swim-rick-sanchez-wallpaper-preview.jpg",
+      "pinterestURL": "https://br.pinterest.com/pin/711639178625351290/"
+    }
+  ]
+}
