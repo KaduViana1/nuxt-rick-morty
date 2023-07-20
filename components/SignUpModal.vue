@@ -44,7 +44,6 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
 const formData = reactive({
   name: '',
   email: '',
@@ -56,25 +55,34 @@ const userName = useUserName();
 const userId = useUserId();
 const router = useRouter();
 
-const signUp = () => {
-  axios
-    .post('/api/signup', {
+const signUp = async () => {
+  const { data, error } = await useFetch<{
+    user: {
+      id: string;
+      name: string;
+    };
+  }>('/api/signup', {
+    method: 'POST',
+    body: {
       name: formData.name,
       email: formData.email,
       password: formData.password,
-    })
-    .then(response => {
-      if (response.data.user) {
-        userName.value = response.data.user.name;
-        userId.value = response.data.user.id;
-        emit('closeModal');
-        router.push('/');
-        resetInputs();
-      }
-    })
-    .catch(error => {
-      errorMessage.value = error.response.data.message;
-    });
+    },
+  });
+
+  if (error.value?.statusMessage) {
+    errorMessage.value = error.value?.message;
+    console.log(error);
+    return;
+  }
+
+  if (data.value?.user) {
+    userName.value = data.value.user.name;
+    userId.value = data.value.user.id;
+    emit('closeModal');
+    router.push('/');
+    resetInputs();
+  }
 };
 
 const resetInputs = () => {

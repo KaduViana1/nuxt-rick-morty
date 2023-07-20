@@ -15,9 +15,11 @@ export default eventHandler(async event => {
   } catch (err) {
     if (err instanceof Prisma.PrismaClientKnownRequestError) {
       if (err.code === 'P2002') {
-        err.message = 'This email is alredy in use';
+        throw createError({
+          statusCode: 400,
+          statusMessage: 'This email is already in use',
+        });
       }
-      return err;
     }
   } finally {
     await prisma.$disconnect();

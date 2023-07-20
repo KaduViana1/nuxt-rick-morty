@@ -37,11 +37,10 @@
       Login <img class="h-10 ml-1" src="../assets/portal.gif" alt="Portal" />
     </button>
   </div>
-  <span class="text-xl">{{ errorMessage }}</span>
+  <span class="text-xl text-red-600">{{ errorMessage }}</span>
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
 const userName = useUserName();
 const userId = useUserId();
 const formData = reactive({
@@ -52,24 +51,29 @@ const errorMessage = ref('');
 const emit = defineEmits(['changeForm', 'closeModal']);
 const router = useRouter();
 
-const signIn = () => {
-  axios
-    .post('/api/login', {
-      email: formData.email,
-      password: formData.password,
-    })
-    .then(response => {
-      if (response.data.user) {
-        userName.value = response.data.user.name;
-        userId.value = response.data.user.id;
-        emit('closeModal');
-        router.push('/');
-        resetInputs();
-      }
-    })
-    .catch(error => {
-      errorMessage.value = error.response.data.message;
-    });
+const signIn = async () => {
+  const { data, error } = await useFetch<{
+    user: {
+      id: string;
+      name: string;
+    };
+  }>('/api/login', {
+    method: 'POST',
+    body: { email: formData.email, password: formData.password },
+  });
+
+  if (error.value?.statusMessage) {
+    errorMessage.value = error.value?.statusMessage;
+    return;
+  }
+
+  if (data.value?.user) {
+    userName.value = data.value.user.name;
+    userId.value = data.value.user.id;
+    emit('closeModal');
+    router.push('/');
+    resetInputs();
+  }
 };
 
 const resetInputs = () => {
