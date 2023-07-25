@@ -1,7 +1,10 @@
 <template>
-  <div class="w-4/5 flex flex-col mx-auto items-center">
-    <form @submit.prevent="searchCharacter" class="w-2/3">
-      <label class="underline text-2xl pl-2" for="search"
+  <div class="flex flex-col mx-auto items-center md:max-w-[90%]">
+    <form
+      @submit.prevent="searchCharacter"
+      class="w-11/12 md:w-2/3 lg:w-full lg:max-w-[1100px]"
+    >
+      <label class="underline text-2xl md:pl-2" for="search"
         >Search Character</label
       >
       <input
@@ -12,13 +15,20 @@
         v-model.lazy="searchInput"
       />
     </form>
-    <div v-if="charactersList" class="flex w-full items-center flex-col">
-      <div class="w-4/5 px-11 mb-5 flex justify-between">
-        <span class="text-3xl">Characters: {{ search }}</span>
-        <span class="text-3xl">Results: {{ charactersList?.info.count }}</span>
+    <div
+      v-if="charactersList"
+      class="flex w-11/12 items-center flex-col md:w-2/3 lg:w-full lg:max-w-[1100px]"
+    >
+      <div class="w-full mb-5 flex justify-between">
+        <span class="text-xl md:text-3xl">Characters: {{ search }}</span>
+        <span class="text-xl md:text-3xl"
+          >Results: {{ charactersList?.info.count }}</span
+        >
       </div>
-      <div class="flex w-4/5 mx-auto justify-center">
-        <div class="grid grid-cols-4 gap-y-10 gap-x-8">
+      <div class="flex mx-auto justify-center">
+        <div
+          class="grid grid-cols-2 gap-y-5 gap-x-5 lg:grid-cols-4 lg:gap-y-10 lg:gap-x-8"
+        >
           <CharacterCard
             v-for="result in charactersList.results"
             :id="result.id.toString()"
@@ -60,6 +70,9 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'Rick and Morty - Characters',
+});
 type DataTypes = {
   info: {
     count: number;

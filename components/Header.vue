@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-primary items-center flex px-48">
+  <header class="bg-primary items-center hidden md:flex px-48">
     <img src="../assets/Rick-icon.png" alt="Rick Head" class="h-24" />
     <nav class="w-full">
       <ul class="flex justify-evenly items-center text-white">

@@ -4,12 +4,12 @@
     class="border-2 w-fit flex flex-col border-white rounded-lg cursor-pointer"
   >
     <img
-      class="h-64 max-h-64 rounded-t-lg"
+      class="h-52 md:h-64 max-h-64 rounded-t-lg aspect-square"
       :src="data?.image"
       :alt="data?.name"
     />
     <div
-      class="flex p-2 h-full space-y-1 text-xl rounded-b-lg flex-col text-white bg-primary card"
+      class="flex p-2 space-y-1 text-xl rounded-b-lg flex-col text-white bg-primary card"
     >
       <div>
         <b>Name:</b>

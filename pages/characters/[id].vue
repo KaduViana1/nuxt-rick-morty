@@ -1,9 +1,9 @@
 <template>
   <div class="flex space-y-6 flex-col items-center">
     <div
-      class="w-2/5 mx-auto p-2 flex flex-col bg-primary rounded-lg border-2 border-white"
+      class="mx-auto p-2 flex flex-col bg-primary rounded-lg border-2 border-white max-w-[302px] md:max-w-full md:min-w-[775px]"
     >
-      <div class="flex mb-6 space-x-2">
+      <div class="flex flex-col md:flex-row mb-6 md:space-x-2">
         <img class="h-64" :src="character?.image" :alt="character?.name" />
         <div class="flex space-y-1 flex-col">
           <p class="text-3xl mb-2">
@@ -57,7 +57,7 @@
           </div>
         </template>
         <n-collapse-item title="Episodes" name="1">
-          <div class="grid grid-cols-2 space-y-1">
+          <div class="grid grid-cols-1 md:grid-cols-2 space-y-1">
             <NuxtLink
               class="text-lg line-clamp-1 underline"
               v-for="episode in character?.episode"
@@ -70,8 +70,10 @@
       </n-collapse>
     </div>
     <p class="text-4xl font-bold">Other characters</p>
-    <div class="flex w-4/5 mx-auto justify-center">
-      <div class="grid grid-cols-4 gap-y-10 gap-x-8">
+    <div class="flex mx-auto justify-center">
+      <div
+        class="grid grid-cols-2 px-2 gap-x-2 gap-y-3 md:grid-cols-4 md:gap-x-5"
+      >
         <CharacterCard :key="id" v-for="id in cards" :id="id.toString()" />
       </div>
     </div>
@@ -101,6 +103,9 @@ const id = useRoute().params.id;
 const url = `https://rickandmortyapi.com/api/character/${id}`;
 const { data: character } = await useFetch<DataTypes>(url, {
   key: id.toString(),
+});
+useHead({
+  title: `Rick and Morty - ${character?.value?.name}`,
 });
 const showEpisodes = ref(false);
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto mt-5 w-2/5 border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center"
+    class="mx-auto mt-5 w-11/12 max-w-[850px] border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center"
   >
     <span class="text-3xl self-start"><b>Commments:</b> {{ count }}</span>
     <Comment
@@ -32,7 +32,9 @@
         <Button class="self-end mt-3" type="submit">Submit</Button>
       </form>
     </div>
-    <div class="text-xl font-bold" v-else>Please login to make a comment</div>
+    <div class="text-lg md:text-xl font-bold text-center" v-else>
+      Please login to make a comment
+    </div>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="modalContainer">
     <div
-      class="relative flex flex-col items-center m-auto bg-primary border-2 text-white border-white rounded-lg w-3/12 p-8"
+      class="relative flex flex-col w-full p-4 items-center m-auto bg-primary border-2 text-white border-white rounded-lg sm:w-3/5 lg:w-3/12 lg:p-8"
     >
       <button @click="closeModal" class="absolute right-2 top-2">
         <svg
@@ -53,5 +53,6 @@ const closeModal = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-inline: 0.8rem;
 }
 </style>

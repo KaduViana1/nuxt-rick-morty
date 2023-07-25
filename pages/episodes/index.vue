@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col items-center">
-    <h1 class="text-5xl font-bold mb-10">Rick and Morty Episodes</h1>
+  <div class="flex flex-col items-center text-center">
+    <h1 class="text-2xl md:text-5xl font-bold mb-10">
+      Rick and Morty Episodes
+    </h1>
     <div
       :class="currentPage === baseUrl ? 'flex-col' : 'flex-col-reverse'"
       class="flex w-full gap-10"
@@ -28,6 +30,9 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'Rick and Morty - Episodes',
+});
 type DataTypes = {
   info: {
     count: number;

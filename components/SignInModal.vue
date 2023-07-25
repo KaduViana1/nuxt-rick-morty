@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="signIn"
-    class="flex flex-col w-4/5 space-y-2 items-center h-full"
+    class="flex flex-col w-full md:w-4/5 space-y-2 items-center h-full"
     id="loginForm"
   >
     <label class="text-2xl" for="email">Email:</label>

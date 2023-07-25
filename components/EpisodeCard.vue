@@ -1,7 +1,7 @@
 <template>
   <div
     @click="router.push(`/episodes/${id}`)"
-    class="w-3/6 cursor-pointer overflow-hidden border-2 border-white mx-auto h-48 bg-primary rounded-lg flex"
+    class="container cursor-pointer overflow-hidden border-2 max-w-[332px] border-white mx-auto bg-primary rounded-lg flex flex-col md:flex-row md:max-w-none w-5/6 md:w-11/12 lg:max-w-[1150px]"
   >
     <div class="imgContainer">
       <img
@@ -10,10 +10,12 @@
         alt="episode image"
       />
     </div>
-    <div class="flex flex-col pl-3 py-3">
+    <div class="flex flex-col p-3 items-center md:items-start md:text-left">
       <p class="text-2xl font-bold">{{ data?.name }}</p>
       <p class="text-xl font-bold">{{ data?.episode }}</p>
-      <p class="text-lg mt-5">{{ description[0].synopsis }}</p>
+      <p class="text-lg mt-5 line-clamp-3">
+        {{ description[0].synopsis }}
+      </p>
     </div>
   </div>
 </template>

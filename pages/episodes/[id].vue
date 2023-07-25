@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto w-2/5 border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center"
+    class="mx-auto border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center w-11/12 max-w-[850px]"
   >
     <span class="text-3xl font-bold">Title:</span>
     <h1 class="text-3xl">{{ episode?.name }}</h1>
@@ -45,13 +45,13 @@
         </div>
       </template>
       <n-collapse-item title="Characters" name="1">
-        <div class="grid grid-cols-2 space-y-1">
+        <div class="grid grid-cols-2 space-y-1 gap-x-2">
           <NuxtLink
             class="text-lg line-clamp-1 underline"
             v-for="character in episode?.characters"
             :key="character"
-            :to="`/characters/${character.slice(42)}`"
-            >{{ getCharacterName(character) }}
+            :to="`/characters/${character?.slice(42)}`"
+            >{{}}
           </NuxtLink>
         </div>
       </n-collapse-item>
@@ -71,6 +71,21 @@ type DataTypes = {
   created: string;
 };
 
+type CharacterTypes = {
+  id: number;
+  name: string;
+  status: string;
+  species: string;
+  type: string;
+  gender: string;
+  origin: { name: string; url: string };
+  location: { name: string; url: string };
+  image: string;
+  episode: string[];
+  url: string;
+  created: string;
+};
+
 import { darkTheme } from 'naive-ui';
 import { episodes } from '../../assets/episodes.json';
 
@@ -82,6 +97,28 @@ const { data: episode } = await useFetch<DataTypes>(
     key: id.toString(),
   }
 );
+const characterList: any = episode.value?.characters.map(async character => {
+  const { data } = await useFetch<CharacterTypes>(character);
+  if (data?.value?.name) {
+    return { name: data.value.name, url: character };
+  } else {
+    return { name: '', url: '' };
+  }
+});
+
+const getCharacters = async (url: string) => {
+  const { data } = await useFetch<CharacterTypes>(url);
+  if (data?.value?.name) {
+    return data.value.name;
+  } else {
+    return;
+  }
+};
+
+useHead({
+  title: `Rick and Morty - ${episode?.value?.episode}`,
+});
+
 const imageIndex = computed(() => {
   if (episode.value?.id) {
     return episode.value?.id - 1;
@@ -92,26 +129,6 @@ const imageIndex = computed(() => {
 
 const toggleShowEpisodes = () => {
   showEpisodes.value = !showEpisodes.value;
-};
-
-const getCharacterName = (url: string) => {
-  type CharacterTypes = {
-    id: number;
-    name: string;
-    status: string;
-    species: string;
-    type: string;
-    gender: string;
-    origin: { name: string; url: string };
-    location: { name: string; url: string };
-    image: string;
-    episode: string[];
-    url: string;
-    created: string;
-  };
-
-  const { data } = useFetch<CharacterTypes>(url);
-  return data?.value?.name;
 };
 </script>
 

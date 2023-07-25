@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="signUp"
-    class="flex flex-col w-4/5 space-y-2 items-center"
+    class="flex flex-col w-full lg:w-4/5 space-y-2 items-center"
     id="registerForm"
   >
     <label class="text-2xl" for="name">Name:</label>
