@@ -83,33 +83,19 @@
 <script setup lang="ts">
 import { darkTheme } from 'naive-ui';
 import { episodes } from '../../assets/episodes.json';
-
-type DataTypes = {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: { name: string; url: string };
-  location: { name: string; url: string };
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
-};
+import { CharacterTypes } from 'types';
 
 const id = useRoute().params.id;
 const url = `https://rickandmortyapi.com/api/character/${id}`;
-const { data: character } = await useFetch<DataTypes>(url, {
+const showEpisodes = ref(false);
+const cards = ref<number[] | undefined>(getRandomCards());
+const { data: character } = await useFetch<CharacterTypes>(url, {
   key: id.toString(),
 });
+
 useHead({
   title: `Rick and Morty - ${character?.value?.name}`,
 });
-const showEpisodes = ref(false);
-
-const cards = ref<number[] | undefined>(getRandomCards());
 
 function getRandomCards() {
   let cardsArray: number[] = [];

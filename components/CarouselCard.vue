@@ -16,19 +16,11 @@
 </template>
 
 <script setup lang="ts">
+import { EpisodeTypes } from 'types';
 const { id } = defineProps(['id']);
 const router = useRouter();
-type DataTypes = {
-  id: number;
-  name: string;
-  air_date: string;
-  episode: string;
-  characters: string[];
-  url: string;
-  created: string;
-};
 
-const { data: episode } = await useFetch<DataTypes>(
+const { data: episode } = await useFetch<EpisodeTypes>(
   `https://rickandmortyapi.com/api/episode/${id}`,
   {
     key: id.toString(),

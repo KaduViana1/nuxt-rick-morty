@@ -28,24 +28,11 @@
 </template>
 
 <script setup lang="ts">
-type DataTypes = {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: { name: string; url: string };
-  location: { name: string; url: string };
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
-};
+import { CharacterTypes } from 'types';
 
 const { id } = defineProps(['id']);
 const url = `https://rickandmortyapi.com/api/character/${id}`;
-const { data } = await useFetch<DataTypes>(url, { key: id });
+const { data } = await useFetch<CharacterTypes>(url, { key: id });
 const router = useRouter();
 </script>
 

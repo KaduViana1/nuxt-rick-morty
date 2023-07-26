@@ -46,12 +46,8 @@ const isLiked = ref();
 const likesCount = ref();
 
 const getAuthorName = async (authorId: string) => {
-  type UserName = {
-    name: string;
-  };
-
   try {
-    const { data: userName } = await useFetch<UserName>(
+    const { data: userName } = await useFetch<{ name: string }>(
       `/api/user/${authorId}`,
       {
         key: authorId,

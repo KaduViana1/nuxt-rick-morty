@@ -21,7 +21,7 @@
           >Leave a comment: <i class="text-xs">( max 150 characters )</i></label
         >
         <textarea
-          class="text-black w-full resize-none p-1"
+          class="text-black w-full resize-none p-1 border-4 border-white focus:border-4 focus:border-lime-600 outline-none"
           type="text"
           id="comment"
           v-model="inputValue"
@@ -32,23 +32,14 @@
         <Button class="self-end mt-3" type="submit">Submit</Button>
       </form>
     </div>
-    <div class="text-lg md:text-xl font-bold text-center" v-else>
+    <div class="text-lg md:text-xl font-bold text-center">
       Please login to make a comment
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-type CommentResponse = {
-  data: {
-    id: string;
-    content: string;
-    createdAt: Date;
-    episde: string;
-    authorId: string;
-  }[];
-  count: number;
-};
+import { CommentType } from 'types';
 const { id } = defineProps(['id']);
 const userName = useUserName();
 const userId = useUserId();
@@ -58,7 +49,7 @@ const count = ref();
 const deleteOptions = useDeleteComment();
 
 const fetchComments = async () => {
-  const { data } = await useFetch<CommentResponse>(`/api/comment/${id}`);
+  const { data } = await useFetch<CommentType>(`/api/comment/${id}`);
 
   if (data) {
     comments.value = data.value?.data;

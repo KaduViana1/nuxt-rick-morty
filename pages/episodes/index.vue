@@ -30,35 +30,18 @@
 </template>
 
 <script setup lang="ts">
+import { EpisodesPageTypes } from 'types';
+
 useHead({
   title: 'Rick and Morty - Episodes',
 });
-type DataTypes = {
-  info: {
-    count: number;
-    pages: number;
-    next: string | null;
-    prev: string | null;
-  };
-  results: [
-    {
-      id: number;
-      name: string;
-      air_date: string;
-      episode: string;
-      characters: string[];
-      url: string;
-      created: string;
-    }
-  ];
-};
 
 const baseUrl = 'https://rickandmortyapi.com/api/episode/';
 const currentPage = ref(baseUrl);
 const episodesList = ref();
 
 const getEpisodes = async (url: string) => {
-  const { data } = await useFetch<DataTypes>(url, {
+  const { data } = await useFetch<EpisodesPageTypes>(url, {
     key: currentPage.value,
   });
   episodesList.value = data.value;

@@ -21,20 +21,12 @@
 </template>
 
 <script setup lang="ts">
-type DataTypes = {
-  id: number;
-  name: string;
-  air_date: string;
-  episode: string;
-  characters: string[];
-  url: string;
-  created: string;
-};
+import { EpisodeTypes } from 'types';
 import { episodes } from '../assets/episodes.json';
 
 const { id } = defineProps(['id']);
 const url = `https://rickandmortyapi.com/api/episode/${id}`;
-const { data } = await useFetch<DataTypes>(url, { key: id });
+const { data } = await useFetch<EpisodeTypes>(url, { key: id });
 const router = useRouter();
 const description = episodes.filter(ep => ep.id == id);
 </script>

@@ -45,13 +45,15 @@
         </div>
       </template>
       <n-collapse-item title="Characters" name="1">
-        <div class="grid grid-cols-2 space-y-1 gap-x-2">
+        <div
+          class="grid grid-cols-3 gap-x-2 md:grid-cols-4 lg:grid-cols-6 gap-y-3"
+        >
           <NuxtLink
-            class="text-lg line-clamp-1 underline"
             v-for="character in episode?.characters"
             :key="character"
             :to="`/characters/${character?.slice(42)}`"
-            >{{}}
+          >
+            <CharacterIcon :url="character" />
           </NuxtLink>
         </div>
       </n-collapse-item>
@@ -61,16 +63,6 @@
 </template>
 
 <script setup lang="ts">
-type DataTypes = {
-  id: number;
-  name: string;
-  air_date: string;
-  episode: string;
-  characters: string[];
-  url: string;
-  created: string;
-};
-
 type CharacterTypes = {
   id: number;
   name: string;
@@ -88,10 +80,11 @@ type CharacterTypes = {
 
 import { darkTheme } from 'naive-ui';
 import { episodes } from '../../assets/episodes.json';
+import { EpisodeTypes } from 'types';
 
 const { id } = useRoute().params;
 const showEpisodes = ref(false);
-const { data: episode } = await useFetch<DataTypes>(
+const { data: episode } = await useFetch<EpisodeTypes>(
   `https://rickandmortyapi.com/api/episode/${id}`,
   {
     key: id.toString(),
