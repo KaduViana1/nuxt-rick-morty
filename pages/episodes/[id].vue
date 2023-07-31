@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mx-auto border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center w-11/12 max-w-[850px]"
+    class="mx-auto mt-20 md:mt-0 border-2 border-white rounded-lg bg-primary flex flex-col p-4 items-center w-11/12 max-w-[850px]"
   >
     <span class="text-3xl font-bold">Title:</span>
     <h1 class="text-3xl">{{ episode?.name }}</h1>
@@ -90,23 +90,10 @@ const { data: episode } = await useFetch<EpisodeTypes>(
     key: id.toString(),
   }
 );
-const characterList: any = episode.value?.characters.map(async character => {
-  const { data } = await useFetch<CharacterTypes>(character);
-  if (data?.value?.name) {
-    return { name: data.value.name, url: character };
-  } else {
-    return { name: '', url: '' };
-  }
-});
 
-const getCharacters = async (url: string) => {
-  const { data } = await useFetch<CharacterTypes>(url);
-  if (data?.value?.name) {
-    return data.value.name;
-  } else {
-    return;
-  }
-};
+if (!episode.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Episode not found!' });
+}
 
 useHead({
   title: `Rick and Morty - ${episode?.value?.episode}`,

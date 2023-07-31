@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col mx-auto items-center md:max-w-[90%]">
+  <div class="flex mt-20 md:mt-0 flex-col mx-auto items-center md:max-w-[90%]">
     <form
       @submit.prevent="searchCharacter"
       class="w-11/12 md:w-2/3 lg:w-full lg:max-w-[1100px]"
@@ -7,17 +7,26 @@
       <label class="underline text-2xl md:pl-2" for="search"
         >Search Character</label
       >
-      <input
-        class="text-xl w-full outline-none p-2 border-2 border-white bg-primary rounded-md mb-10 focus:border-lime-400"
-        type="text"
-        placeholder="Poopybutthole"
-        id="search"
-        v-model.lazy="searchInput"
-      />
+      <div
+        class="w-full relative flex items-center overflow-hidden border-white bg-primary rounded-md"
+      >
+        <input
+          class="text-xl w-full outline-none p-2 border-2 border-white bg-primary rounded-md focus:border-lime-400"
+          type="text"
+          placeholder="Poopybutthole"
+          id="search"
+          v-model.lazy="searchInput"
+        />
+        <button
+          class="absolute right-4 focus:text-lime-400 active:text-lime-400"
+        >
+          <Icon name="fa6-solid:magnifying-glass" size="20" />
+        </button>
+      </div>
     </form>
     <div
       v-if="charactersList"
-      class="flex w-11/12 items-center flex-col md:w-2/3 lg:w-full lg:max-w-[1100px]"
+      class="flex w-11/12 items-center mt-8 flex-col md:w-2/3 lg:w-full lg:max-w-[1100px]"
     >
       <div class="w-full mb-5 flex justify-between">
         <span class="text-xl md:text-3xl">Characters: {{ search }}</span>

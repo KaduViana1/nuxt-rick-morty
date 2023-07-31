@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center text-center">
+  <div class="flex mt-20 md:mt-0 flex-col items-center text-center">
     <h1 class="text-2xl md:text-5xl font-bold mb-10">
       Rick and Morty Episodes
     </h1>

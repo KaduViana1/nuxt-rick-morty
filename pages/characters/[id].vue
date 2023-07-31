@@ -1,5 +1,5 @@
 <template>
-  <div class="flex space-y-6 flex-col items-center">
+  <div class="flex space-y-6 flex-col items-center mt-20 md:mt-0">
     <div
       class="mx-auto p-2 flex flex-col bg-primary rounded-lg border-2 border-white max-w-[302px] md:max-w-full md:min-w-[775px]"
     >
@@ -92,6 +92,10 @@ const cards = ref<number[] | undefined>(getRandomCards());
 const { data: character } = await useFetch<CharacterTypes>(url, {
   key: id.toString(),
 });
+
+if (!character.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Character not found!' });
+}
 
 useHead({
   title: `Rick and Morty - ${character?.value?.name}`,

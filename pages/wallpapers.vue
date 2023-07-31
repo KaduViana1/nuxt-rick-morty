@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex flex-col justify-center items-center w-full space-y-4 text-center"
+    v-if="userId"
+    class="mt-20 md:mt-0 flex flex-col justify-center items-center w-full space-y-4 text-center"
   >
     <h1 class="text-4xl font-bold">Rick and Morty wallpappers</h1>
     <div class="space-x-4">
@@ -48,6 +49,9 @@
       />
     </div>
   </div>
+  <div v-else class="flex justify-center items-center md:text-5xl font-bold">
+    Please login to access wallpapers
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -56,6 +60,7 @@ useHead({
 });
 import { mobile, desktop } from '../assets/wallpappers.json';
 const wallpappersOrientation = ref<'Mobile' | 'Desktop'>('Mobile');
+const userId = useUserId();
 </script>
 
 <style scoped></style>

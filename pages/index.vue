@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-4 w-11/12 h-auto mx-auto mb-14 border-white rounded-3xl overflow-hidden lg:max-w-[1200px] lg:h-[640px]"
+    class="mt-12 md:mt-0 w-full md:border-4 md:w-11/12 h-auto mx-auto mb-6 md:mb-14 border-white md:rounded-3xl overflow-hidden lg:max-w-[1200px] lg:h-[640px]"
   >
     <n-carousel autoplay draggable keyboard show dot-type="line">
       <CarouselCard
@@ -12,7 +12,7 @@
   </div>
   <div class="flex w-11/12 mx-auto justify-center">
     <div
-      class="grid grid-cols-2 gap-y-2 gap-x-2 md:gap-y-10 md:gap-x-8 lg:grid-cols-4"
+      class="grid grid-cols-2 gap-y-3 gap-x-3 md:gap-y-10 md:gap-x-8 lg:grid-cols-4"
     >
       <KeepAlive>
         <CharacterCard v-for="id in cards" :key="id" :id="id.toString()" />

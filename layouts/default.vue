@@ -3,6 +3,7 @@
     <Teleport to="body">
       <UserModal @closeModal="modalIsOpen = false" v-show="modalIsOpen" />
       <DeleteModal v-show="deleteOptions.modalOpen" />
+      <SideMenu />
     </Teleport>
 
     <Header @open-modal="modalIsOpen = true" />
