@@ -15,5 +15,3 @@
 <script setup lang="ts">
 const { wallpapper } = defineProps(['wallpapper']);
 </script>
-
-<style scoped></style>

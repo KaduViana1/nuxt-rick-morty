@@ -3,7 +3,7 @@
     @click="router.push(`/episodes/${id}`)"
     class="container cursor-pointer overflow-hidden border-2 max-w-[332px] border-white mx-auto bg-primary rounded-lg flex flex-col md:flex-row md:max-w-none w-5/6 md:w-11/12 lg:max-w-[1150px]"
   >
-    <div class="imgContainer">
+    <div class="h-full w-[330px] min-w-[330px]">
       <img
         class="h-full w-full"
         :src="`/episodes_images/episode-${id}.webp`"
@@ -30,11 +30,3 @@ const { data } = await useFetch<EpisodeTypes>(url, { key: id });
 const router = useRouter();
 const description = episodes.filter(ep => ep.id == id);
 </script>
-
-<style scoped>
-.imgContainer {
-  height: 100%;
-  width: 331px;
-  min-width: 331px;
-}
-</style>

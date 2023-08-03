@@ -4,8 +4,6 @@
 .cache
 dist
 node_modules
-
-# Local env files
 .env
 .env.*
 !.env.example

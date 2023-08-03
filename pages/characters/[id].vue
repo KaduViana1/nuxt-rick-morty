@@ -115,5 +115,3 @@ const toggleShowEpisodes = () => {
   showEpisodes.value = !showEpisodes.value;
 };
 </script>
-
-<style></style>

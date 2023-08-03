@@ -23,5 +23,3 @@ const goBack = async () => {
   await navigateTo('/', { replace: true });
 };
 </script>
-
-<style scoped></style>

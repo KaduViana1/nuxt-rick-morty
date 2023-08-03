@@ -32,7 +32,7 @@
         <Button class="self-end mt-3" type="submit">Submit</Button>
       </form>
     </div>
-    <div class="text-lg md:text-xl font-bold text-center">
+    <div v-if="!userId" class="text-lg md:text-xl font-bold text-center">
       Please login to make a comment
     </div>
   </div>
@@ -100,5 +100,3 @@ const onLike = async (id: string) => {
 
 fetchComments();
 </script>
-
-<style scoped></style>

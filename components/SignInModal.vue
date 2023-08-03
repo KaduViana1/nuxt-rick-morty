@@ -57,7 +57,7 @@
         Login <img class="h-10 ml-1" src="../assets/portal.gif" alt="Portal" />
       </button>
     </div>
-    <span class="text-xl text-red-600">{{ errorMessage }}</span>
+    <span class="text-xl text-red-600 mt-4">{{ errorMessage }}</span>
   </div>
 </template>
 

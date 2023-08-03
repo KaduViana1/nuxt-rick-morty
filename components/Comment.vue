@@ -94,5 +94,3 @@ getLikesCount();
 getAuthorName(comment.authorId);
 postIsLiked();
 </script>
-
-<style scoped></style>

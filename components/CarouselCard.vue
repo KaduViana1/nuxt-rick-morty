@@ -27,5 +27,3 @@ const { data: episode } = await useFetch<EpisodeTypes>(
   }
 );
 </script>
-
-<style scoped></style>

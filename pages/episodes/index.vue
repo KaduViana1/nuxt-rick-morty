@@ -55,5 +55,3 @@ const changePage = (url: string) => {
 
 getEpisodes(baseUrl);
 </script>
-
-<style scoped></style>

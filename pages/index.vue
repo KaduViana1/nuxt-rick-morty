@@ -61,5 +61,3 @@ onMounted(() => {
   carrouselCards.value = sessionCarouselCards;
 });
 </script>
-
-<style scoped></style>

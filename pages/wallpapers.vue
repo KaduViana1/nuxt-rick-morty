@@ -62,5 +62,3 @@ import { mobile, desktop } from '../assets/wallpappers.json';
 const wallpappersOrientation = ref<'Mobile' | 'Desktop'>('Mobile');
 const userId = useUserId();
 </script>
-
-<style scoped></style>

@@ -60,7 +60,7 @@
       </div>
       <Button form="registerForm" type="submit">Sign Up</Button>
     </div>
-    <span class="text-xl text-red-600">{{ errorMessage }}</span>
+    <span class="text-xl text-red-600 mt-2">{{ errorMessage }}</span>
   </div>
 </template>
 

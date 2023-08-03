@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  rickandmorty:
+    build: .
+    ports:
+      - '3000:3000'
+      - '5555:5555'
+    volumes:
+      - db-data:/app/database
+    environment:
+      DATABASE_URL: file:/app/database/rickmorty.db
+
+volumes:
+  db-data:
