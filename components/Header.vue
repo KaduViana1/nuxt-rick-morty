@@ -6,7 +6,7 @@
     <div class="flex">
       <button
         @click="() => (menuIsOpen = !menuIsOpen)"
-        class="absolute top-7 left-10"
+        class="absolute top-7 left-5"
       >
         <Icon name="fa6-solid:bars" size="28" class="active:text-lime-300" />
       </button>

@@ -1,1 +1,1 @@
-Rick and Morty
+# Rick & Morty Nuxt App

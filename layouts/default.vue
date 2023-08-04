@@ -20,6 +20,18 @@ const deleteOptions = useDeleteComment();
 
 <style scoped>
 .pageContainer {
-  min-height: calc(100vh - 168px);
+  min-height: calc(100vh - 40px);
+}
+
+@media (min-width: 768px) {
+  .pageContainer {
+    min-height: calc(100vh - 120px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pageContainer {
+    min-height: calc(100vh - 168px);
+  }
 }
 </style>

@@ -49,7 +49,10 @@
       />
     </div>
   </div>
-  <div v-else class="flex justify-center items-center md:text-5xl font-bold">
+  <div
+    v-else
+    class="flex justify-center items-center mt-20 md:mt-0 text-3xl text-center md:text-5xl font-bold pt-40 md:pt-0"
+  >
     Please login to access wallpapers
   </div>
 </template>
